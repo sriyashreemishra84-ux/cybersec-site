@@ -1,31 +1,24 @@
-// Loader
-window.addEventListener('load', () => {
-  document.getElementById('loader').style.display = 'none';
-});
+// Counter Animation
+const counters = document.querySelectorAll('.counter');
+const speed = 200; // Lower = faster
 
-// Dark mode toggle
-const toggle = document.getElementById('theme-toggle');
-toggle.onclick = () => {
-  document.body.dataset.theme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+const animateCounters = () => {
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / speed;
+
+      if(count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 10);
+      } else {
+        counter.innerText = target + (target == 99 ? '%' : '+');
+      }
+    };
+    updateCount();
+  });
 };
 
-// Mobile menu
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.querySelector('.nav-links');
-hamburger.onclick = () => navLinks.classList.toggle('show');
-
-// Counter animation
-const counters = document.querySelectorAll('.counter');
-counters.forEach(counter => {
-  counter.innerText = '0';
-  const update = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const inc = target / 100;
-    if(count < target){
-      counter.innerText = Math.ceil(count + inc);
-      setTimeout(update, 20);
-    } else counter.innerText = target + '+';
-  }
-  update();
-});
+// Run when page loads
+window.addEventListener('load', animateCounters);
