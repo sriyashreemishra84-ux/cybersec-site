@@ -70,6 +70,31 @@
   </main>
   <button id="scroll-top" aria-label="Scroll to top">↑</button>
   <footer><p>© 2026 Sriya Mishra. Built for GitHub Pages.</p></footer>
+  
   <script src="js/script.js"></script>
+  <script>
+  // Counter Animation - This will make 0 count up to 500, 1200 etc
+  const counters = document.querySelectorAll('.counter');
+  const speed = 200;
+
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+
+        if(count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 10);
+        } else {
+          counter.innerText = target + (target == 99 ? '%' : '+');
+        }
+      };
+      updateCount();
+    });
+  };
+  window.addEventListener('load', animateCounters);
+  </script>
 </body>
-      </html>
+  </html>
