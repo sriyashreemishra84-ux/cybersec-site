@@ -2,15 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact - CyberSec Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Sriya Mishra</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar">
-    <a href="index.html" class="logo">Cyber<span>Sec</span>Pro</a>
-    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="contact.html" class="active">Contact</a></li></ul>
-  </nav>
-  <section class="container"><h1>Contact Us</h1><form><input placeholder="Name"><input placeholder="Email"><textarea placeholder="Message"></textarea><button class="btn">Send</button></form></section>
+  <header class="navbar">
+    <a href="index.html" class="logo">Sriya Mishra<span>.</span></a>
+    <button class="hamburger" id="hamburger-btn"><i class="fas fa-bars"></i></button>
+    <nav>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main class="container" style="padding: 80px 5%;">
+    <h1 style="text-align:center; font-size: 2.5rem; color: var(--accent); margin-bottom: 20px;">Get In Touch</h1>
+    <p style="text-align:center; color: #aaa; margin-bottom: 50px;">Have a project or need a security audit? Let's talk.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+      
+      <div class="stat-card" style="text-align: left;">
+        <i class="fas fa-envelope" style="font-size: 2rem;"></i>
+        <h3>Email Me</h3>
+        <p><a href="mailto:youremail@gmail.com" style="color: var(--accent); text-decoration: none;">youremail@gmail.com</a></p>
+      </div>
+
+      <div class="stat-card" style="text-align: left;">
+        <i class="fab fa-linkedin" style="font-size: 2rem;"></i>
+        <h3>LinkedIn</h3>
+        <p><a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: var(--accent); text-decoration: none;">Connect with me</a></p>
+      </div>
+
+      <div class="stat-card" style="text-align: left;">
+        <i class="fab fa-github" style="font-size: 2rem;"></i>
+        <h3>GitHub</h3>
+        <p><a href="https://github.com/sriyashreemishra84-ux" target="_blank" style="color: var(--accent); text-decoration: none;">See my code</a></p>
+      </div>
+      
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>© 2026 Sriya Mishra. All rights reserved.</p>
+    </div>
+  </footer>
+  
   <script src="js/script.js"></script>
 </body>
 </html>
