@@ -3,30 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sriya Mishra | Modern Cybersecurity Solutions</title>
-  <meta name="description" content="Sriya Mishra provides network security, ethical hacking, penetration testing and cybersecurity training.">
+  <title>Sriya Mishra | Cybersecurity Specialist</title>
+  <meta name="description" content="Sriya Mishra - Network Security, Ethical Hacking, Penetration Testing">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* This hides the loader if css file fails */
-    #loader { display: none !important; }
-    body { background: #0a0a0a; color: white; font-family: Arial; padding: 20px; }
-    .logo { font-size: 24px; font-weight: bold; color: #00f0ff; }
-    .btn-primary { background: #00f0ff; color: #000; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px; }
-    .stat-card { border: 1px solid #333; padding: 15px; margin: 10px; border-radius: 8px; display: inline-block; }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <div id="loader"><div class="spinner"></div></div>
   
   <header class="navbar">
     <a href="index.html" class="logo">Sriya Mishra<span>.</span></a>
+    <button class="hamburger"><i class="fas fa-bars"></i></button>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="learning.html">Learning</a></li>
-        <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -35,42 +27,60 @@
   <main>
     <section class="hero">
       <div class="hero-content">
-        <h1>Protecting Your Digital Assets</h1>
+        <h1>Protecting Your <span>Digital Assets</span></h1>
         <p>Enterprise-grade cybersecurity for a digital-first world. Defend. Detect. Respond.</p>
         <a href="contact.html" class="btn btn-primary">Get a Security Audit</a>
+      </div>
+      <div class="hero-illustration">
+        <i class="fas fa-shield-halved"></i>
       </div>
     </section>
     
     <section class="stats container">
-      <div class="stat-card"><h3 class="counter" data-target="500">0</h3><p>Clients Protected</p></div>
-      <div class="stat-card"><h3 class="counter" data-target="1200">0</h3><p>Vulnerabilities Found</p></div>
-      <div class="stat-card"><h3 class="counter" data-target="24">0</h3><p>7/7 Monitoring</p></div>
-      <div class="stat-card"><h3 class="counter" data-target="99">0</h3><p>% Uptime</p></div>
+      <div class="stat-card">
+        <i class="fas fa-users-shield"></i>
+        <h3 class="counter" data-target="25">0</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-bug"></i>
+        <h3 class="counter" data-target="150">0</h3>
+        <p>Vulnerabilities Found</p>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-certificate"></i>
+        <h3 class="counter" data-target="5">0</h3>
+        <p>Certifications</p>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-code-branch"></i>
+        <h3 class="counter" data-target="99">0</h3>
+        <p>% Security Score</p>
+      </div>
     </section>
   </main>
   
-  <footer><p>© 2026 Sriya Mishra. Built for GitHub Pages.</p></footer>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Sriya Mishra</h4>
+        <p>Cybersecurity Specialist focused on ethical hacking and network defense.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <div class="socials">
+          <a href="https://github.com/sriyashreemishra84-ux" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:youremail@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Sriya Mishra. All rights reserved.</p>
+    </div>
+  </footer>
   
-  <script>
-  // Counter Animation + Hide loader
-  document.getElementById('loader').style.display = 'none';
-  
-  const counters = document.querySelectorAll('.counter');
-  const speed = 200;
-  counters.forEach(counter => {
-    const updateCount = () => {
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText;
-      const increment = target / speed;
-      if(count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCount, 10);
-      } else {
-        counter.innerText = target + (target == 99 ? '%' : '+');
-      }
-    };
-    updateCount();
-  });
-  </script>
+  <button id="scroll-top"><i class="fas fa-arrow-up"></i></button>
+  <script src="js/script.js"></script>
 </body>
-</html>
+  </html>
