@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sriya Mishra | Cybersecurity Specialist</title>
-  <meta name="description" content="Sriya Mishra - Network Security, Ethical Hacking, Penetration Testing">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -13,9 +12,11 @@
   
   <header class="navbar">
     <a href="index.html" class="logo">Sriya Mishra<span>.</span></a>
-    <button class="hamburger"><i class="fas fa-bars"></i></button>
+    <button class="hamburger" id="hamburger-btn">
+      <i class="fas fa-bars"></i>
+    </button>
     <nav>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-menu">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
@@ -29,18 +30,23 @@
       <div class="hero-content">
         <h1>Protecting Your <span>Digital Assets</span></h1>
         <p>Enterprise-grade cybersecurity for a digital-first world. Defend. Detect. Respond.</p>
-        <a href="contact.html" class="btn btn-primary">Get a Security Audit</a>
+        <a href="#projects" class="btn btn-primary">Explore My Portfolio</a> <!-- Fixed button text -->
       </div>
       <div class="hero-illustration">
-        <i class="fas fa-shield-halved"></i>
+        <i class="fas fa-shield-halved"></i> <!-- Hero illustration -->
       </div>
     </section>
+
+    <section class="about container" id="about">
+      <h2>About Me</h2> <!-- New About Me section -->
+      <p>"Hi, I'm Sriya Mishra, an aspiring cybersecurity enthusiast and frontend developer passionate about web security, ethical hacking, and secure web applications."</p>
+    </section>
     
-    <section class="stats container">
+    <section class="stats container" id="projects">
       <div class="stat-card">
-        <i class="fas fa-users-shield"></i>
+        <i class="fas fa-code"></i>
         <h3 class="counter" data-target="25">0</h3>
-        <p>Projects Completed</p>
+        <p>Projects Completed</p> <!-- Real achievements -->
       </div>
       <div class="stat-card">
         <i class="fas fa-bug"></i>
@@ -53,9 +59,9 @@
         <p>Certifications</p>
       </div>
       <div class="stat-card">
-        <i class="fas fa-code-branch"></i>
+        <i class="fab fa-github"></i>
         <h3 class="counter" data-target="99">0</h3>
-        <p>% Security Score</p>
+        <p>% Uptime</p>
       </div>
     </section>
   </main>
@@ -70,8 +76,8 @@
         <h4>Connect</h4>
         <div class="socials">
           <a href="https://github.com/sriyashreemishra84-ux" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:youremail@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> <!-- Add your LinkedIn -->
+          <a href="mailto:youremail@gmail.com"><i class="fas fa-envelope"></i></a> <!-- Add your Email -->
         </div>
       </div>
     </div>
@@ -83,4 +89,4 @@
   <button id="scroll-top"><i class="fas fa-arrow-up"></i></button>
   <script src="js/script.js"></script>
 </body>
-  </html>
+</html>
