@@ -1,16 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Blog - Sriyashree Jewellers</title>
-    <style>
-        body {font-family: Arial; background:#fffaf0; padding:20px; color:#333}
-        h1 {color:#b8860b; text-align:center}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberSec Blog | Stay Safe Online</title>
+<style>
+  :root { --bg:#0f172a; --card:#1e293b; --text:#e2e8f0; --accent:#22d3ee; }
+  body { margin:0; font-family: system-ui, sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+  header { background:var(--card); padding:1.5rem; text-align:center; border-bottom:2px solid var(--accent); }
+  header h1 { margin:0; color:var(--accent); }
+  nav a { color:var(--text); margin:0 1rem; text-decoration:none; }
+  nav a:hover { color:var(--accent); }
+  .container { max-width:900px; margin:2rem auto; padding:0 1rem; }
+  .post { background:var(--card); padding:1.5rem; margin-bottom:1.5rem; border-radius:12px; border-left:4px solid var(--accent); }
+  .post h2 { margin-top:0; }
+  .tag { background:#334155; padding:0.2rem 0.6rem; border-radius:6px; font-size:0.8rem; margin-right:0.5rem; }
+  footer { text-align:center; padding:2rem; color:#94a3b8; font-size:0.9rem; }
+</style>
 </head>
 <body>
-    <h1>Welcome to Our Jewellery Blog</h1>
-    <p>Coming soon: Tips on Bridal Gold, Temple Jewellery care, and more!</p>
-    <a href="index.html">← Back to Home</a>
+  <header>
+    <h1>CyberSec Blog</h1>
+    <p>Threats, Tools, and How to Defend Yourself</p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#posts">Articles</a>
+      <a href="#tools">Tools</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <div class="container" id="posts">
+    <div class="post">
+      <span class="tag">Phishing</span>
+      <h2>5 Red Flags in Phishing Emails in 2026</h2>
+      <p>From AI-generated emails to fake GitHub notifications... learn how to spot the newest phishing tactics targeting devs.</p>
+      <a href="#" style="color:var(--accent)">Read more →</a>
+    </div>
+
+    <div class="post">
+      <span class="tag">Tutorial</span>
+      <h2>Securing Your GitHub Repo</h2>
+      <p>2FA, branch protection, secret scanning, and Actions security. A checklist for open source maintainers.</p>
+      <a href="#" style="color:var(--accent)">Read more →</a>
+    </div>
+
+    <div class="post" id="tools">
+      <span class="tag">Tools</span>
+      <h2>Top 3 Free Security Scanners</h2>
+      <p>Nmap, Wazuh, and OWASP ZAP. When to use each one and quick start commands.</p>
+      <a href="#" style="color:var(--accent)">Read more →</a>
+    </div>
+  </div>
+
+  <footer id="about">
+    <p>© 2026 CyberSec Blog. Built with HTML + GitHub Pages.</p>
+  </footer>
 </body>
 </html>
